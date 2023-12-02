@@ -19,6 +19,8 @@ def main():
 			compare(img, espelho_v(img))
 		elif m == 4:
 			compare(img, espelho_h(img))
+		elif m==5:
+			compare(img,redimensionar(img))
 		m = menu()
 
 	return
