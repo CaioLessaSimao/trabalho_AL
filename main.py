@@ -3,10 +3,9 @@ import cv2
 import matplotlib.pyplot as plt
 from funcoes import *
 
-
 def main():
-	image = cv2.imread("lulu.jpg")
-	img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+	imagem = cv2.imread("lenna.jpg")
+	img = cv2.cvtColor(imagem, cv2.COLOR_BGR2RGB)
 	img = img.tolist()
 
 	m = menu()
@@ -15,7 +14,11 @@ def main():
 			plt.imshow(cinza(img), cmap="gray")
 			plt.show()
 		elif m == 2:
-			compare(img, negative(img))
+			compare(img, negativo(img))
+		elif m == 3:
+			compare(img, espelho_v(img))
+		elif m == 4:
+			compare(img, espelho_h(img))
 		m = menu()
 
 	return
