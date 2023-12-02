@@ -80,3 +80,21 @@ def channel_first(img):
 			aux2.append(aux3)
 		aux.append(aux2)
 	return aux
+
+def redimensionar(img):
+		altura = int(input("Digite a altura desejada: "))
+		largura = int(input("Digete a largura desejada: "))
+		tamanho = altura,largura
+		return aux_red(img,tamanho)
+
+def aux_red(img, tamanho):
+    return [
+        [
+            [
+                img[int(len(img) * linha / tamanho[0])][int(len(img[0]) * coluna / tamanho[1])][RGB]
+                for RGB in range(3)
+            ]
+            for coluna in range(tamanho[1])
+        ]
+        for linha in range(tamanho[0])
+    ]
