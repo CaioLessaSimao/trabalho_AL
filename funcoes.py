@@ -105,15 +105,3 @@ def soma_lista(img1, img2):
 		aux.append(aux2)
 	return aux
 
-def channel_first(img):
-	aux = []
-	for i in range(len(img[0][0])):
-		aux2 = []
-		for j in range(len(img)):
-			aux3 = []
-			for k in range(len(img[0])):
-				aux3.append(img[j][k][i])
-			aux2.append(aux3)
-		aux.append(aux2)
-	return aux
-
