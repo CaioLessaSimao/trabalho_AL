@@ -87,14 +87,26 @@ def redimensionar(img):
 		tamanho = altura,largura
 		return aux_red(img,tamanho)
 
-def aux_red(img, tamanho):
-    return [
-        [
-            [
-                img[int(len(img) * linha / tamanho[0])][int(len(img[0]) * coluna / tamanho[1])][RGB]
-                for RGB in range(3)
-            ]
-            for coluna in range(tamanho[1])
-        ]
-        for linha in range(tamanho[0])
-    ]
+def aux_red(imagem, tamanho):
+    nova_imagem = []
+
+    altura, largura = tamanho
+
+    for linha in range(altura):
+        nova_linha = []
+        for coluna in range(largura):
+            novo_pixel = []
+            for RGB in range(3):
+                indice_linha_original = int(len(imagem) * linha / altura)
+                indice_coluna_original = int(len(imagem[0]) * coluna / largura)
+
+                indice_linha_original = min(indice_linha_original, len(imagem) - 1)
+                indice_coluna_original = min(indice_coluna_original, len(imagem[0]) - 1)
+                
+                novo_pixel.append(imagem[indice_linha_original][indice_coluna_original][RGB])
+
+            nova_linha.append(novo_pixel)
+
+        nova_imagem.append(nova_linha)
+
+    return nova_imagem
