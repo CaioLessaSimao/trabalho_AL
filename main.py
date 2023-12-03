@@ -11,16 +11,16 @@ def main():
 	m = menu()
 	while(m != 0):
 		if m == 1:
+			comparacao(img, espelho_v(img))
+		elif m == 2:
+			comparacao(img, espelho_h(img))
+		elif m == 3:
+			comparacao(img,redimensionar(img))
+		elif m == 4:
 			plt.imshow(cinza(img), cmap="gray")
 			plt.show()
-		elif m == 2:
-			compare(img, negativo(img))
-		elif m == 3:
-			compare(img, espelho_v(img))
-		elif m == 4:
-			compare(img, espelho_h(img))
 		elif m==5:
-			compare(img,redimensionar(img))
+			comparacao(img, negativo(img))
 		m = menu()
 
 	return

@@ -4,19 +4,14 @@ import numpy as np
 
 def menu():
 	print(" # MANIPULANDO IMAGENS #\nOperações disponíveis:")
-	print("( 1 ) Converter RGB para tons de cinza.")
-	print("( 2 ) Inverter as cores de uma imagem.")
-	print("( 3 ) Espelhamento vertical.")
-	print("( 4 ) Espelhamento horizontal.")
-	print("( 5 ) Redimensionamento.")
+	print("( 1 ) Espelhamento vertical.")
+	print("( 2 ) Espelhamento horizontal.")
+	print("( 3 ) Redimensionamento.")
+	print("( 4 ) Conversão de colorida para cinza.")
+	print("( 5 ) Inversão de cores.")
 	print("( 0 ) Sair.")
 	print()
 	return int(input("Digite o número correspondente a operação desejada: "))
-
-# Conversão para escala de cinza
-def cinza(img):
-	temp = channel_first(img)
-	return soma_lista(temp[2], soma_lista(temp[0], temp[1]))
 
 # Conversão para tons negativos
 def negativo(img):
@@ -79,8 +74,18 @@ def aux_red(imagem, tamanho):
 
     return nova_imagem
 
+# Conversão para escala de cinza
+def cinza(img):
+	img_cinza = np.empty([len(img), len(img[0])], dtype=np.uint8)
+	for linha in range(len(img)):
+		for coluna in range(len(img[0])):
+			img_cinza[linha][coluna] = int((0.299*img[linha][coluna][0]) + (0.587*img[linha][coluna][1]) + (0.114*img[linha][coluna][2]))
+	return img_cinza
+			
+
+
 # ----------------------------------------- #
-def compare(original, manipulada, title_1="Original", title_2="Manipulada"):
+def comparacao(original, manipulada, title_1="Original", title_2="Manipulada"):
     plt.figure(figsize=(15, 25))
     plt.subplot(1, 2, 1)
     plt.title(title_2)
