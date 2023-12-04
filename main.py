@@ -1,10 +1,9 @@
-'''Vocês precisam instalar o opencv e o matplotlib na maquina de vocês '''
 import cv2 
 import matplotlib.pyplot as plt
 from funcoes import *
 
 def main():
-	imagem = cv2.imread("lenna.jpg")
+	imagem = cv2.imread("original.jpg")
 	img = cv2.cvtColor(imagem, cv2.COLOR_BGR2RGB)
 	img = img.tolist()
 

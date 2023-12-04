@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def menu():
-	print(" # MANIPULANDO IMAGENS #\nOperações disponíveis:")
+	print("\n # MANIPULANDO IMAGENS #\nOperações disponíveis:")
 	print("( 1 ) Espelhamento vertical.")
 	print("( 2 ) Espelhamento horizontal.")
 	print("( 3 ) Redimensionamento.")
@@ -12,19 +12,6 @@ def menu():
 	print("( 0 ) Sair.")
 	print()
 	return int(input("Digite o número correspondente a operação desejada: "))
-
-# Conversão para tons negativos
-def negativo(img):
-	aux = []
-	for i in img:
-		aux2 = []
-		for j in i:
-			aux3 = []
-			for k in j:
-				aux3.append(255-k)
-			aux2.append(aux3)
-		aux.append(aux2)
-	return aux
 
 # Espelhamento Vertical da imagem
 def espelho_v(img):
@@ -82,7 +69,18 @@ def cinza(img):
 			img_cinza[linha][coluna] = int((0.299*img[linha][coluna][0]) + (0.587*img[linha][coluna][1]) + (0.114*img[linha][coluna][2]))
 	return img_cinza
 			
-
+# Conversão para tons negativos
+def negativo(img):
+	aux = []
+	for i in img:
+		aux2 = []
+		for j in i:
+			aux3 = []
+			for k in j:
+				aux3.append(255-k)
+			aux2.append(aux3)
+		aux.append(aux2)
+	return aux
 
 # ----------------------------------------- #
 def comparacao(original, manipulada, title_1="Original", title_2="Manipulada"):
