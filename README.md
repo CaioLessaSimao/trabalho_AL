@@ -19,17 +19,17 @@ O programa disponibiliza, por meio de um menu, as operações de:
 # Saídas
 - Espelhamento Vertical
 
-![alt text]()
+![alt text](saídas/espelhamento_vertical.png)
 
 - Espelhamento Horizonal
 
-![alt text]()
+![alt text](saídas/espelhamento_horizontal.png)
 
 - Redimensionamento (exemplo com dimensões 50 x 70)
+![alt text](saídas/redimensionamento_50x70.png)
 
-![alt text]()
 - Conversão RGB para tons de cinza
-![alt text]()
+![alt text](saídas/escala_de_cinza.png)
 
 - Inversão de cores de uma imagem
-![alt text]()
+![alt text](saídas/inversao_de_cores.png)
