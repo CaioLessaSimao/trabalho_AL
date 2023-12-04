@@ -17,8 +17,7 @@ def main():
 		elif m == 3:
 			comparacao(img,redimensionar(img))
 		elif m == 4:
-			plt.imshow(cinza(img), cmap="gray")
-			plt.show()
+			comparacaoCinza(img, cinza(img))
 		elif m==5:
 			comparacao(img, negativo(img))
 		m = menu()

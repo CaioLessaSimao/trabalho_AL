@@ -96,6 +96,17 @@ def comparacao(original, manipulada, title_1="Original", title_2="Manipulada"):
     plt.show()
     return
 
+def comparacaoCinza(original, manipulada, title_1="Original", title_2="Manipulada"):
+    plt.figure(figsize=(15, 25))
+    plt.subplot(1, 2, 1)
+    plt.title(title_2)
+    plt.imshow(manipulada, cmap="gray")
+    plt.subplot(1, 2, 2)
+    plt.title(title_1)
+    plt.imshow(original)
+    plt.show()
+    return
+
 def soma_lista(img1, img2):
 	aux = []
 	for i in range(len(img1)):
