@@ -20,8 +20,8 @@ def main():
 		elif m==5:
 			comparacao(img, negativo(img))
 		m = menu()
-
 	return
+
 
 if __name__ == "__main__":
 	main()

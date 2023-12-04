@@ -18,12 +18,10 @@ O programa disponibiliza, por meio de um menu, as operações de:
 
 # Saídas
 - Espelhamento Vertical
-
-![alt text](saídas/espelhamento_vertical.png)
+![alt text](saídas/espelho_vertical.png)
 
 - Espelhamento Horizonal
-
-![alt text](saídas/espelhamento_horizontal.png)
+![alt text](saídas/espelho_horizontal.png)
 
 - Redimensionamento (exemplo com dimensões 50 x 70)
 ![alt text](saídas/redimensionamento_50x70.png)

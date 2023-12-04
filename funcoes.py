@@ -83,6 +83,7 @@ def negativo(img):
 	return aux
 
 # ----------------------------------------- #
+
 def comparacao(original, manipulada, title_1="Original", title_2="Manipulada"):
     plt.figure(figsize=(15, 25))
     plt.subplot(1, 2, 1)
@@ -113,4 +114,3 @@ def soma_lista(img1, img2):
 			aux2.append(img1[i][j] + img2[i][j])
 		aux.append(aux2)
 	return aux
-
